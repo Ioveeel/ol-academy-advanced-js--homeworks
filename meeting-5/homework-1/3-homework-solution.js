@@ -13,7 +13,7 @@ function displayError(errorMessage) {
 }
 
 function loginUser(email, password) {
-  return new Promise((resolve, reject) => {
+   new Promise((resolve, reject) => {
     if (Object.keys(usersDB).includes(email)) {
       setTimeout(() => {
         console.log("Now we have the data of user:", email);
@@ -28,7 +28,7 @@ function loginUser(email, password) {
 }
 
 function getUserVideos(email) {
-  return new Promise((resolve, reject) => {
+  new Promise((resolve, reject) => {
     if (usersDB[email].length !== 0) {
       setTimeout(() => {
         resolve(usersDB[email]);
